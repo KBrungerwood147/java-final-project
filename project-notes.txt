@@ -1,1 +1,9 @@
 Final Project Repository Setup Complete
+
+
+this week, Ive made a project using java based on a game system.
+within this system, there is a main menu, two games, and a exit option.
+the two games I made were Guess the number, and Rock paper scissors.
+Guess the number uses the Random class, as well as if and else statements, and one while loop to make it repeating. 
+Rock - Paper - Scissors uses the Random class, some if and else statements, and a while loop too, it uses an array function for the computer to randomly select each choice.
+close to the end, I made some changes that made it look nicer, like counting wins, ties, losses, changing the code around to look cleaner. 

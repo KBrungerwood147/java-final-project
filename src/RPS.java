@@ -1,3 +1,5 @@
+//child class
+
 package src;
 
 import java.util.Random;

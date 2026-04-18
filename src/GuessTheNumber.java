@@ -1,3 +1,5 @@
+//child class
+
 package src;
 import java.util.Random;
 import java.util.Scanner;
@@ -18,6 +20,8 @@ public class GuessTheNumber extends Game{
 
     //overriding play method
     public void play(Scanner input){
+
+
         Random rand = new Random();
 
         int secret = rand.nextInt(100) + 1;
@@ -31,9 +35,12 @@ public class GuessTheNumber extends Game{
 
             //if statement for guessing
 
+            //if guess is lower then secret, then it gives hint that it's too low
             if (guess < secret){
                 System.out.println("Too Low!");
             }
+
+            //if guess is higher then secret, then it gives hint that it's too high
             else if (guess > secret){
                 System.out.println("Too High!");
             }

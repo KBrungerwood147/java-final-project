@@ -1,4 +1,7 @@
 
+//main
+
+
 package src;
 
 import java.util.Scanner;
@@ -22,11 +25,12 @@ public class MainMenu{
                     2. Rock, Paper, Scissors\n
                     3. Quit\n
                     """);
-
+                    //handles error due to invalid input
                 if(input.hasNextInt()){
                     //store user input for choice
                     int choice = input.nextInt();
 
+                    //choice 1
                     if (choice == 1){
                         System.out.println("you have entered Guess The Number Game, Have Fun!");
                         Game guessing = new GuessTheNumber("guess the Number!");
@@ -37,7 +41,8 @@ public class MainMenu{
                         //call play method
                         guessing.play(input);
                     }
-
+                    
+                    //choice 2
                     else if(choice == 2){
                         System.out.println("you have entered Rock, Paper, Scissors, Have Fun!!");
                         Game RPS = new RPS("Rock, Paper, Scissors!");
@@ -49,6 +54,7 @@ public class MainMenu{
                         RPS.play(input);
                     }
 
+                    //choice 3
                     else if(choice == 3){
                         Game exit = new Game("exiting the menu, have a good day!");
                         exit.end();
