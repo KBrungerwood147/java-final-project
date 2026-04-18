@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class RPS extends Game {
     
     //constructor
-    public RPS(string name){
+    public RPS(String name){
         super(name);
     }
 
@@ -23,7 +23,36 @@ public class RPS extends Game {
         Scanner input = new Scanner(System.in);
         Random rand = new Random();
 
-        String
+        //array of choices
+        String[] choices = {"rock", "paper", "scissors"};
+        String userChoice = "";
+
+        //while loop to determine whether you guessed correctly
+        while (true){
+            System.out.println("your move!:");
+            userChoice = input.next().toLowerCase();
+            
+            if (!userChoice.equals("rock") && !userChoice.equals("paper") && !userChoice.equals("scissors")){
+                System.out.println("Invalid choice.");
+                continue;
+            }
+
+            //generating computer's choice
+            String computerChoice = choices[rand.nextInt(3)];
+            System.out.println("Computer chose:" + computerChoice);
+
+            if (userChoice.equals(computerChoice)){
+                System.out.println("it's a tie!");
+            }
+            else if((userChoice.equals("rock") && computerChoice.equals("scissors")) ||(userChoice.equals("paper") && computerChoice.equals("rock")) || (userChoice.equals("scissors") && computerChoice.equals("paper"))){
+                System.out.println("you win!");
+            }
+            else{
+                System.out.println("you lose!");
+            }
+            input.close();
+        }
+        
     }
 
 
