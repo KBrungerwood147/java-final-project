@@ -7,3 +7,5 @@ the two games I made were Guess the number, and Rock paper scissors.
 Guess the number uses the Random class, as well as if and else statements, and one while loop to make it repeating. 
 Rock - Paper - Scissors uses the Random class, some if and else statements, and a while loop too, it uses an array function for the computer to randomly select each choice.
 close to the end, I made some changes that made it look nicer, like counting wins, ties, losses, changing the code around to look cleaner. 
+
+Date(04/18/2026)
