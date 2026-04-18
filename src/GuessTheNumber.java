@@ -40,6 +40,7 @@ public class GuessTheNumber extends Game{
             }
         }
         System.out.println("Correct!!, You guessed it in: " + attempts + ", Congradulations");
+        input.close();
     }
 
     

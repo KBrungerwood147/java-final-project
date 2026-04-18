@@ -29,11 +29,18 @@ public class MainMenu{
 
                     if (choice == 1){
                         System.out.println("you have entered Guess The Number Game, Have Fun!");
-                        //runGuessTheNumber();
+                        Game guessing = new GuessTheNumber("guess the Number!");
+                        guessing.start();
+                        guessing.play();
+                        break;
                     }
 
                     else if(choice == 2){
                         System.out.println("you have entered Rock, Paper, Scissors, Have Fun!!");
+                        Game RPS = new RPS("Rock, Paper, Scissors!");
+                        RPS.start();
+                        RPS.play();
+                        break;
                     }
 
                     else if(choice == 3){
