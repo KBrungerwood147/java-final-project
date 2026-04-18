@@ -1,11 +1,9 @@
-//superclass
-
 
 package src;
 
 import java.util.Scanner;
 
-public class Game {
+public class MainMenu {
 
     //fields
     private static int x = 0;
