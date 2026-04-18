@@ -30,21 +30,28 @@ public class MainMenu{
                     if (choice == 1){
                         System.out.println("you have entered Guess The Number Game, Have Fun!");
                         Game guessing = new GuessTheNumber("guess the Number!");
+                        
+                        //call start method
                         guessing.start();
-                        guessing.play();
-                        break;
+                        
+                        //call play method
+                        guessing.play(input);
                     }
 
                     else if(choice == 2){
                         System.out.println("you have entered Rock, Paper, Scissors, Have Fun!!");
                         Game RPS = new RPS("Rock, Paper, Scissors!");
+                        
+                        //call start method
                         RPS.start();
-                        RPS.play();
-                        break;
+                        
+                        //call start method
+                        RPS.play(input);
                     }
 
                     else if(choice == 3){
-                        System.out.println("you have choosen to exit, have a good day!");
+                        Game exit = new Game("exiting the menu, have a good day!");
+                        exit.end();
                         break;
                     }
 

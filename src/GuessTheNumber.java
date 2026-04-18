@@ -17,9 +17,8 @@ public class GuessTheNumber extends Game{
     }
 
     //overriding play method
-    public void play(){
+    public void play(Scanner input){
         Random rand = new Random();
-        Scanner input = new Scanner(System.in);
 
         int secret = rand.nextInt(100) + 1;
         int guess = 0;
@@ -39,9 +38,9 @@ public class GuessTheNumber extends Game{
                 System.out.println("Too High!");
             }
         }
-        System.out.println("Correct!!, You guessed it in: " + attempts + ", Congradulations");
-        input.close();
-    }
+        System.out.println("Correct!!, You guessed it in: " + attempts + ", Congratulations");
+
+}
 
     
 }

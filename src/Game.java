@@ -3,6 +3,8 @@
 
 package src;
 
+import java.util.Scanner;
+
 public class Game {
 
     //fields
@@ -24,13 +26,13 @@ public class Game {
 
     }
 
-    public void play(){
+    public void play(Scanner input){
         System.out.println("Playing" + name + "have fun!");
 
     }
     public void end(){
         System.out.println("exiting game hub, have a good day!");
-        
+        System.exit(0);       
     }
 }
 
