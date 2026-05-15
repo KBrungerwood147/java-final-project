@@ -23,7 +23,8 @@ public class MainMenu{
                     Please select a game you would like to play!\n
                     1. Guess the Number\n
                     2. Rock, Paper, Scissors\n
-                    3. Quit\n
+                    3. Trivia Game\n
+                    4. Quit\n
                     """);
                     //handles error due to invalid input
                 if(input.hasNextInt()){
@@ -56,6 +57,18 @@ public class MainMenu{
 
                     //choice 3
                     else if(choice == 3){
+                        System.out.println("you have entered Trivia Game, Have Fun!!");
+                        Game trivia = new TriviaGame("Trivia Game");
+                        
+                        //call start method
+                        trivia.start();
+                        
+                        //call play method
+                        trivia.play(input);
+                    }
+
+                    //choice 4
+                    else if(choice == 4){
                         Game exit = new Game("exiting the menu, have a good day!");
                         exit.end();
                         break;
