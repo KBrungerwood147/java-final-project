@@ -19,9 +19,3 @@ Finally I added some try and catch blocks in order to catch any errors, and fixe
 I also added a README file that explains the project and the components of the project.
 
 Date(05/15/2026)
-
-
-All the files are in one folder,
-Folder Directory - C:\Users\ksb20\Documents\VS_Code\java-final-project
-
-This can also be found on github at - https://github.com/KBrungerwood147/java-final-project
