@@ -29,25 +29,34 @@ public class GuessTheNumber extends Game{
         int attempts = 0;
 
         while(guess != secret){
-            System.out.println("enter your guess:");
-            guess = input.nextInt();
-            attempts++;
+            try{
+                System.out.println("enter your guess:");
+                guess = input.nextInt();
+                attempts++;
 
-            //if statement for guessing
+                //if statement for guessing
 
-            //if guess is lower then secret, then it gives hint that it's too low
-            if (guess < secret){
-                System.out.println("Too Low!");
+                //if guess is lower then secret, then it gives hint that it's too low
+                if (guess < secret){
+                    System.out.println("Too Low!");
+                }
+
+                //if guess is higher then secret, then it gives hint that it's too high
+                else if (guess > secret){
+                    System.out.println("Too High!");
+                }
             }
-
-            //if guess is higher then secret, then it gives hint that it's too high
-            else if (guess > secret){
-                System.out.println("Too High!");
+        
+            catch(Exception e){
+                System.out.println("Invalid input. Please enter a number between 1 and 100.");
+                if (input.hasNext()) {
+                    input.next(); // eat invalid input
+                }
             }
         }
         System.out.println("Correct!!, You guessed it in: " + attempts + ", Congratulations");
 
-}
+    }
 
     
 }
