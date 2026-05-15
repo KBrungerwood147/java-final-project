@@ -24,12 +24,16 @@ public class MainMenu{
                     1. Guess the Number\n
                     2. Rock, Paper, Scissors\n
                     3. Trivia Game\n
-                    4. Quit\n
-                    """);
+                    4. Word Scramble\n
+                    5. High-Low Card Game\n
+                    6. Quit
+                """);
                     //handles error due to invalid input
                 if(input.hasNextInt()){
                     //store user input for choice
                     int choice = input.nextInt();
+                    input.nextLine();
+
 
                     //choice 1
                     if (choice == 1){
@@ -69,6 +73,30 @@ public class MainMenu{
 
                     //choice 4
                     else if(choice == 4){
+                        System.out.println("you have entered Word Scramble, Have fun!");
+                        Game wordScramble = new WordScramble("Word Scramble");
+
+                        //call start method
+                        wordScramble.start();
+
+                        //call play method
+                        wordScramble.play(input);
+                    }
+
+                    //choice 5
+                    else if(choice == 5){
+                        System.out.println("you have entered High-Low Card Game, Have fun!");
+                        Game highLow = new HLCardGame("High-Low Card Game");
+
+                        //call start method
+                        highLow.start();
+
+                        //call play method
+                        highLow.play(input);
+                    }
+
+                    //choice 6
+                    else if(choice == 6){
                         Game exit = new Game("exiting the menu, have a good day!");
                         exit.end();
                         break;
@@ -78,7 +106,9 @@ public class MainMenu{
 
                 else{
                     System.out.println("Sorry, that's not a choice!");
-                    input.next(); //eats invalid input
+                    if (input.hasNext()) {
+                        input.next(); // eat invalid input
+                    }
                 }
 
 

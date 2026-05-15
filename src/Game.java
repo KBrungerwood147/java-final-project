@@ -27,7 +27,7 @@ public class Game {
     }
 
     public void play(Scanner input){
-        System.out.println("Playing" + name + "have fun!");
+        System.out.println("Playing " + name + " have fun!");
 
     }
     public void end(){
