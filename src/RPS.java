@@ -35,37 +35,45 @@ public class RPS extends Game {
 
         //while loop to determine whether you guessed correctly
         while (true){
-            System.out.println("your move!:");
-            userChoice = input.next().toLowerCase();
+            try{
+                System.out.println("your move!:");
+                userChoice = input.next().toLowerCase();
 
-            if (userChoice.equals("quit")){
-                System.out.println("Going back to Main Menu!");
-                System.out.println("Amount of wins: " + wins);
-                System.out.println("Amount of ties: " + ties);
-                System.out.println("Amount of losses: " + losses);
-                break;
-            }
-            
-            if (!userChoice.equals("rock") && !userChoice.equals("paper") && !userChoice.equals("scissors")){
-                System.out.println("Invalid choice.");
-                continue;
-            }
+                if (userChoice.equals("quit")){
+                    System.out.println("Going back to Main Menu!");
+                    System.out.println("Amount of wins: " + wins);
+                    System.out.println("Amount of ties: " + ties);
+                    System.out.println("Amount of losses: " + losses);
+                    break;
+                }
+                
+                if (!userChoice.equals("rock") && !userChoice.equals("paper") && !userChoice.equals("scissors")){
+                    System.out.println("Invalid choice.");
+                    continue;
+                }
 
-            //generating computer's choice
-            String computerChoice = choices[rand.nextInt(3)];
-            System.out.println("Computer chose:" + computerChoice);
+                //generating computer's choice
+                String computerChoice = choices[rand.nextInt(3)];
+                System.out.println("Computer chose:" + computerChoice);
 
-            if (userChoice.equals(computerChoice)){
-                System.out.println("it's a tie!");
-                ties++;
+                if (userChoice.equals(computerChoice)){
+                    System.out.println("it's a tie!");
+                    ties++;
+                }
+                else if((userChoice.equals("rock") && computerChoice.equals("scissors")) ||(userChoice.equals("paper") && computerChoice.equals("rock")) || (userChoice.equals("scissors") && computerChoice.equals("paper"))){
+                    System.out.println("you win!");
+                    wins++;
+                }
+                else{
+                    System.out.println("you lose!");
+                    losses++;
+                }
             }
-            else if((userChoice.equals("rock") && computerChoice.equals("scissors")) ||(userChoice.equals("paper") && computerChoice.equals("rock")) || (userChoice.equals("scissors") && computerChoice.equals("paper"))){
-                System.out.println("you win!");
-                wins++;
-            }
-            else{
-                System.out.println("you lose!");
-                losses++;
+            catch(Exception e){
+                System.out.println("Invalid input. Please enter Rock, Paper, Scissors, or quit.");
+                if (input.hasNext()) {
+                    input.next(); // eat invalid input
+                }
             }
         }
         

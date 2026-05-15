@@ -9,3 +9,12 @@ Rock - Paper - Scissors uses the Random class, some if and else statements, and 
 close to the end, I made some changes that made it look nicer, like counting wins, ties, losses, changing the code around to look cleaner. 
 
 Date(04/18/2026)
+
+
+There was a couple of things I have completed this week, to start with I integrated the Trivia game into the Game hub.
+This took a while due to not knowing at first how i would go from one file to another.
+Then I added 2 games, the first was WordScramble which took a while due to it generating random letters, although i was able to fix it.
+the other game was high low card game, which didnt take as long, and I only really had trouble with accidently using .Lower instead of .Upper.
+Finally I added some try and catch blocks in order to catch any errors, and fixed small things in order to make it look a little nicer.
+
+Date(05/15/2026)
