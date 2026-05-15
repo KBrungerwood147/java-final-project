@@ -38,3 +38,19 @@ This program has all of its files in one folder
 Folder Directory - C:\Users\ksb20\Documents\VS_Code\java-final-project
 
 This can also be found on github at - https://github.com/KBrungerwood147/java-final-project
+
+# how to compile the project - 
+
+1. first you open the terminal
+2. Then you change in the project folder: `cd C:\Users\ksb20\Documents\VS_Code\java-final-project`
+3. then you compile all java files: `javac src\*.java`
+
+# how to run the game hub
+1. in the same project folder, run the main class: `java -cp src MainMenu`
+2. the game menu will appear and you can choose one the 5 games by entering a number.
+3. entering `6` will allow you to exit the game hub.
+
+# Notes on Scanner and input
+1. the project uses scanner to read user input from the console.
+2. enter values with leniency on capitals then press enter.
+3. if invalid input is entered, then then program will return a message asking to re-enter choice.
